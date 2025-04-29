@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+       <!--ENCABEZADO NAV--> 
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            
+          <a class="navbar-brand"><i class="fa-brands fa-instagram">
+            <strong class="ms-1"></i>Instagram</strong></a>
+          
+          <form class="d-flex" role="search">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                Create a new post</button>
+              
+            <button type="button" class="btn btn-secondary btn-sm ms-2">
+              <div class="dropdown ms-2">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item text-danger" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+            
+          </form>
+        </div>
+      </nav>
+      <!--MODAL-->
+      <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostLabel" aria-hidden="true" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold">Create a new post</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fw-bold">
+              <p>Caption:</p>
+            </div>
+            <div><!--Modal publicar e iconos de camara e ubicacion-->
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">Add the caption of yours post here</label>
+              
+              </div>
+              <i class="fa-solid fa-camera ms-3" ></i>  
+              <i class="fa-solid fa-location-dot ms-3" ></i>
+              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-success ">Publish</button>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+      <main>
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#gridView" type="button" role="tab"><i class="fa-solid fa-border-all"></i></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="list-tab" data-bs-toggle="tab" data-bs-target="#listView" type="button" role="tab"><i class="fa-solid fa-square"></i></button>
+          </li>
+        </ul>
+        <div class="tab-content mt-3" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="gridView" role="tabpanel">
+        <!--CONTENEDOR IMAGENES DEL INSTA 9 CUADRICULA-->
+        <section class="container mt-4 text-center"> 
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+            <div class="col">
+              <img src="https://images.unsplash.com/photo-1616036740257-9449ea1f6605?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXRhcmRlY2VyJTIwcGxheWF8ZW58MHx8MHx8fDA%3D
+              " class="img-fluid w-100" alt="foto 1">
+            </div>
+            <div class="col">
+              <img src="https://assets1.afa.com.ar/media/DANI/ABR-25/lionel-messi-inter-miami-2.jpg
+              " class="img-fluid object-fit-cover"  alt="foto 2">
+            </div>
+            <div class="col">
+              <img src="https://media.istockphoto.com/id/1458309053/es/foto/bandera-colombiana-en-el-parque-nacional.jpg?s=612x612&w=0&k=20&c=1U0o52uXkm8efEhejWnGqRoeDmbEOhaYoindm9QVSzc=" class="img-fluid w-100" alt="foto3">
+            </div>
+            <div class="col">
+              <img src="https://i0.wp.com/www.buenossaborespanama.com/wp-content/uploads/2024/01/seafood-paella-in-the-fry-pan-with-prawns-shrimps-2023-11-27-04-54-07-utc-scaled.jpg?fit=1200%2C799&ssl=1" class="img-fluid w-100" alt="foto 4">
+            </div>
+            <div class="col">
+              <img src="https://images.photowall.com/products/45548/surfing.jpg?h=699&q=85" class="img-fluid w-100" alt="foto 5">
+            </div>
+            <div class="col">
+              <img src="https://www.foot01.com/img/images/1200x/art/2010/Oct/17/video-l-incroyable-dribble-de-ronaldinho_61069_10961.jpg" class="img-fluid w-100" alt="foto 6">
+            </div>
+            <div class="col">
+              <img src="https://images.squarespace-cdn.com/content/v1/5d77a7f8ad30356d21445262/1580478003877-L7PT1K2KJXPH0P8WJWUR/mejores-playas-de-colombia_Playa_Blanca" class="img-fluid w-100" alt="foto 7">
+            </div>
+            <div class="col">
+              <img src="https://img.freepik.com/foto-gratis/cerezos-flor-primavera-pagoda-chureito-montana-fuji-japon_335224-213.jpg" class="img-fluid w-100" alt="foto 8">
+            </div>
+            <div class="col">
+              <img src="https://i.pinimg.com/736x/8b/29/3a/8b293a344b873daf87aa225c8203c149.jpg" class="img-fluid w-100" alt="foto 9">
+            </div>
+          </div>
+        </div>
+        <!--la lista de 4 imagenes (LISTA)-->
+        <div class="tab-pane fade" id="listView" role="tabpanel">
+          <section class="container text-center">
+            <div class="row row-cols-1 g-2">   
+        
+              <div class="col"> <!--primera imagen de la lista-->
+                <div class="text-start w-50 mx-auto">
+                <h5 class="fw-bold">Dia de Playa</h5>
+              </div> 
+                <img src="https://images.unsplash.com/photo-1616036740257-9449ea1f6605?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXRhcmRlY2VyJTIwcGxheWF8ZW58MHx8MHx8fDA%3D
+                " class="img-fluid mx-auto d-block w-50" alt="foto 1">
+                <div class="text-start w-50 mx-auto">  
+                  <p><strong>204 likes</strong></p>
+                  <p>Atardecer en la playa!!</p>
+                </div>
+              </div>
+
+
+              <div class="text-start w-50 mx-auto"><!--segunda imagen de la lista-->
+                <h5 class="fw-bold">Messi en racha</h5>
+              </div>   
+              <div class="col"><img src="https://assets1.afa.com.ar/media/DANI/ABR-25/lionel-messi-inter-miami-2.jpg
+                " class="img-fluid mx-auto d-block w-50"  alt="foto 2"></div>
+                <div class="text-start w-50 mx-auto">
+                  <p><strong>1,545,200 Likes </1></strong></1></p>
+                  <p>Messi vuelve a marcar otro Hack Trick en la MLS</p>
+                </div>
+              </div>
+
+              <div class="text-start w-50 mx-auto"><!--Tercera imagen de la lista-->
+                <h5 class="fw-bold">Colombia</h5>
+              </div>    
+              <div class="col"><img src="https://media.istockphoto.com/id/1458309053/es/foto/bandera-colombiana-en-el-parque-nacional.jpg?s=612x612&w=0&k=20&c=1U0o52uXkm8efEhejWnGqRoeDmbEOhaYoindm9QVSzc=" class="img-fluid mx-auto d-block w-50" alt="foto3">
+              </div>
+              <div class="text-start w-50 mx-auto">
+                <p><strong>5,365 Likes</strong></p>
+                <p>Las cuidades mas bonitas de colombia</p>
+              </div>
+              <div class="text-start w-50 mx-auto"><!--Tercera imagen de la lista-->
+                <h5 class="fw-bold">Recorrido por los mejores restaurantes de España</h5>
+              </div>    
+              <div class="col"><img src="https://i0.wp.com/www.buenossaborespanama.com/wp-content/uploads/2024/01/seafood-paella-in-the-fry-pan-with-prawns-shrimps-2023-11-27-04-54-07-utc-scaled.jpg?fit=1200%2C799&ssl=1" class="img-fluid mx-auto d-block w-50" alt="foto 4">
+                <div class="text-start w-50 mx-auto">
+              <p><strong>3,554 Likes</strong></p>
+              <p>Las mejores paellas de españa</p>
+                 
+        </div>
+        </section>
+      </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
